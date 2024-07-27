@@ -3,7 +3,7 @@
   library(dplyr)
   library(colorspace)
   
-  df5 = read.csv("s15.csv")#对照组数据
+  df5 = read.csv("s5.csv")#对照组数据
   df5 <- df5 %>%
     mutate(city = gsub(" ", "\n", city)) %>%
     arrange(desc(m)) %>%
@@ -17,7 +17,7 @@
     shape = "circle",
     positioning = c("regular", "clustered_by_area"),
     maxIteration = 80,
-    error_tol = 0.001,
+    error_tol = 0.1,
     seed = 31
   )
   #调色板：采用了黑白调色代替月相变化
@@ -31,7 +31,7 @@
   )
   
   # 创建一个新的R绘图设备，并设置大小
-  png("tm0_overall.png", width = 30, height = 30, units = "cm", res = 500)
+  png("月相底图.png", width = 30, height = 30, units = "cm", res = 500)
   #进行绘图
   drawTreemap(
     tm5,
