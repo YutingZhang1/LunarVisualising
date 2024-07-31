@@ -1,0 +1,366 @@
+city,prov,m
+Guangzhou,Guangdong,9300825
+Dongguan,Guangdong,6773952
+Foshan,Guangdong,6690771
+Shenzhen,Guangdong,6379266
+Chengdu,Sichuan,5985151
+Suzhou,Jiangsu,5782183
+Chongqing,Chongqing,4730029
+Hangzhou,Zhejiang,4723860
+Shanghai,Shanghai,4607638
+Xi'an,Shaanxi,4518858
+Huizhou,Guangdong,4213403
+Nanjing,Jiangsu,3925061
+Zhengzhou,Henan,3859422
+Changsha,Hunan,3856667
+Wuxi,Jiangsu,3815437
+Wuhan,Hubei,3670602
+Hefei,Anhui,3579055
+Beijing,Beijing,3575280
+Changzhou,Jiangsu,2859909
+Zhongshan,Guangdong,2818889
+Jinan,Shandong,2710559
+Xianyang,Shaanxi,2639341
+Jiaxing,Zhejiang,2531505
+Tianjin,Tianjin,2528439
+Qingyuan,Guangdong,2522413
+Zhoukou,Henan,2486308
+Chuzhou,Anhui,2394827
+Xuzhou,Jiangsu,2389651
+Langfang,Hebei,2349061
+Fuyang,Anhui,2274849
+Zhaoqing,Guangdong,2183492
+Jiangmen,Guangdong,2173843
+Suzhou,Anhui,2096967
+Huaian,Jiangsu,2088205
+Baoding,Hebei,2070089
+Hengyang,Hunan,2070023
+Shangqiu,Henan,2067982
+Shaoxing,Zhejiang,2023456
+Guiyang,Guizhou,2010547
+Linyi,Shandong,2009651
+Nantong,Jiangsu,1960461
+Ningbo,Zhejiang,1946913
+Kunming,Yunnan,1925449
+Huanggang,Hubei,1924591
+Yancheng,Jiangsu,1917632
+Nanning,Guangxi,1913467
+Yangzhou,Jiangsu,1883602
+Huzhou,Zhejiang,1863629
+Jinhua,Zhejiang,1851622
+Zhumadian,Henan,1850130
+Taizhou,Jiangsu,1831838
+Nanchong,Sichuan,1795160
+Nanyang,Henan,1785782
+Nanchang,Jiangxi,1784378
+Jieyang,Guangdong,1763536
+Lu'an,Anhui,1754012
+Shangrao,Jiangxi,1753729
+Xinyang,Henan,1745603
+Shenyang,Liaoning,1743806
+Bozhou,Anhui,1731935
+Shijiazhuang,Hebei,1730876
+Maoming,Guangdong,1725148
+Zhenjiang,Jiangsu,1720797
+Ganzhou,Jiangxi,1717583
+Suqian,Jiangsu,1713969
+Zhangjiang,Guangdong,1713621
+Jining,Shandong,1706481
+Zunyi,Guizhou,1694248
+Qingdao,Shandong,1667582
+Kaifeng,Henan,1664950
+Heze,Shandong,1659142
+Zhuhai,Guangdong,1651271
+Cangzhou,Hebei,1629249
+Deyang,Sichuan,1620715
+Weifang,Shandong,1613394
+Shaoyang,Hunan,1598655
+Chenzhou,Hunan,1597354
+Jingzhou,Hubei,1592449
+Yueyang,Hunan,1588373
+Shantou,Guangdong,1573494
+Xiaogan,Hubei,1551387
+Xiamen,Fujian,1511670
+Xinxiang,Henan,1503745
+Yichun,Jiangxi,1492905
+Meishan,Sichuan,1482660
+Jiujiang,Jiangxi,1465533
+Luoyang,Henan,1465156
+Dezhou,Shandong,1454708
+Heyuan,Guangdong,1448235
+Qiannan Buyi and Miao Autonomous Prefecture,Guizhou,1447223
+Taiyuan,Shanxi,1430582
+Quanzhou,Fujian,1400612
+Shaoguan,Guangdong,1398273
+Anqing,Anhui,1395650
+Zhuzhou,Hunan,1392106
+Mianyang,Sichuan,1388489
+Yongzhou,Hunan,1378072
+Bijie,Guizhou,1369751
+Weinan,Shaanxi,1357853
+Yulin,Guangxi,1356014
+Xiangtan,Hunan,1355735
+Bengbu,Anhui,1355252
+Tai'an,Shandong,1342431
+Lianyungang,Jiangsu,1341746
+Guilin,Guangxi,1340923
+Dazhou,Sichuan,1329651
+Yunfu,Guangdong,1322952
+Wuhu,Anhui,1309490
+Wenzhou,Zhejiang,1299698
+Xuchang,Henan,1299202
+Changde,Hunan,1289870
+Huainan,Anhui,1282672
+Xingtai,Hebei,1253815
+Handan,Hebei,1234514
+Taizhou,Zhejiang,1233272
+Meizhou,Guangdong,1211842
+Guang'an,Sichuan,1210166
+Ji'an,Jiangxi,1185688
+Yiyang,Hunan,1185470
+Huaihua,Hunan,1182003
+Pingdingshan,Henan,1177529
+Ziyang,Sichuan,1164364
+Guigang,Guangxi,1163697
+Jinzhong,Shanxi,1162356
+Xiangyang,Hubei,1161540
+Tangshan,Hebei,1156747
+Neijiang,Sichuan,1149010
+Liaocheng,Shandong,1133564
+Suining,Sichuan,1129195
+Zhangzhou,Fujian,1129095
+Zibo,Shandong,1123062
+Fuzhou,Jiangxi,1107530
+Luzhou,Sichuan,1105915
+Quzhou,Zhejiang,1088631
+Binzhou,Shandong,1081298
+Yibin,Sichuan,1080457
+Wuzhou,Guangxi,1076922
+Anyang,Henan,1057972
+Fuzhou,Fujian,1054162
+Haikou,Hainan,1043929
+Ma'anshan,Anhui,1026755
+Zigong,Sichuan,1026012
+Changchun,Jilin,1024171
+Loudi,Hunan,1015002
+Qujing,Yunnan,998982
+Xuancheng,Anhui,998962
+Tongren,Guizhou,995332
+Chaozhou,Guangdong,986998
+Liuzhou,Guangxi,985904
+Zaozhuang,Shandong,978681
+Qiandongnan Miao and Dong Autonomous Prefecture,Guizhou,973998
+Yangjiang,Guangdong,971858
+Shanwei,Guangdong,947483
+Hengshui,Hebei,913332
+Leshan,Sichuan,912292
+Zhaotong,Yunnan,902074
+Anshun,Guizhou,885072
+Xianning,Hubei,884164
+Yichang,Hubei,878025
+Harbin,Heilongjiang,874102
+Jiaozuo,Henan,871910
+Jingmen,Hubei,865209
+Puyang,Henan,848401
+Luohe,Henan,832150
+Hechi,Guangxi,803499
+Yantai,Shandong,799241
+Huangshi,Hubei,795839
+Qinzhou,Guangxi,791816
+Bazhong,Sichuan,789414
+Huaibei,Anhui,780731
+Xiangxi Tujia and Miao Autonomous Prefecture,Hunan,780654
+Chizhou,Anhui,767467
+Sanya,Hainan,754408
+Enshi Tujia and Miao Autonomous Prefecture,Hubei,745212
+Baoji,Shaanxi,716921
+Baise,Guangxi,715602
+Rizhao,Shandong,710213
+Hezhou,Guangxi,699686
+Dali Bai Autonomous Prefecture,Yunnan,692261
+Laibin,Guangxi,684929
+Tongling,Anhui,657289
+Yuncheng,Shanxi,656718
+Guangyuan,Sichuan,656468
+Qinhuangdao,Hebei,650978
+Jinzhou,Liaoning,644777
+Urumqi,Xinjiang,644640
+Liupanshui,Guizhou,628847
+Lan'zhou,Gansu,624968
+Linfen,Shanxi,613942
+Ningde,Fujian,612564
+Ezhou,Hubei,610923
+Huludao,Liaoning,602466
+Suizhou,Hubei,599229
+Xiantao,Hubei,598045
+Huangshan,Anhui,590015
+Sanmenxia,Henan,584453
+Ya'an,Sichuan,569056
+Yinchuan,Ningxia,568015
+Dongying,Shandong,567817
+Ankang,Shaanxi,567371
+Yuxi,Yunnan,563511
+Anshan,Liaoning,561628
+Luliang,Shanxi,558831
+Hanzhong,Shaanxi,558079
+Xinzhou,Shanxi,557439
+Putian,Fujian,549003
+Shiyan,Hubei,545753
+Jingdezhen,Jiangxi,545458
+Zhangjiakou,Hebei,543821
+Nanping,Fujian,541536
+Qianxinan Buyi and Miao Autonomous Prefecture,Guizhou,537969
+Lishui,Zhejiang,535667
+Sanming,Fujian,524896
+Honghe Hani and Yi Autonomous Prefecture,Yunnan,518417
+Suihua,Heilongjiang,518086
+Liangshan Yi Autonomous Prefecture,Sichuan,500148
+Pingxiang,Jiangxi,489725
+Yulin,Shaanxi,483860
+Beihai,Guangxi,482921
+Tianmen,Hubei,478754
+Chuxiong Yi Autonomous Prefecture,Yunnan,466707
+Longyan,Fujian,465174
+Lingshui Li Autonomous County,Hainan,465118
+Changji Hui Autonomous Prefecture,Xinjiang,462669
+Shangluo,Shaanxi,461460
+Tieling,Liaoning,456452
+Hebi,Henan,455825
+Chongzuo,Guangxi,445698
+Zhangjiajie,Hunan,442504
+Panjin,Liaoning,438699
+Ordos,Inner Mongolia,427661
+Wuzhong,Ningxia,413663
+Changzhi,Shanxi,409077
+Chengde,Hebei,408814
+Yingtan,Jiangxi,402033
+Siping,Jilin,398666
+Songyuan,Jilin,396226
+Datong,Shanxi,395684
+Hohhot,Inner Mongolia,380731
+Liaoyang,Liaoning,380230
+Zhoushan,Zhejiang,376760
+Chengmai County,Hainan,366527
+Dalian,Liaoning,362709
+Wenshan Zhuang and Miao Autonomous Prefecture,Yunnan,358011
+Qianjiang,Hubei,356381
+Dingxi,Gansu,354419
+Fushun,Liaoning,351137
+Lijiang,Yunnan,349793
+Yingkou,Liaoning,348523
+Chifeng,Inner Mongolia,348474
+Xinyu,Jiangxi,345193
+Yan'an,Shaanxi,341165
+Daqing,Heilongjiang,335378
+Chaoyang,Liaoning,334096
+Jilin,Jilin,326378
+Pingliang,Gansu,326277
+Weihai,Shandong,315283
+Xining,Qinghai,313875
+Wanning,Hainan,305036
+Tianshui,Gansu,302205
+Jincheng,Shanxi,299397
+Xishuangbanna Dai Autonomous Prefecture,Yunnan,296238
+Tongliao,Inner Mongolia,294733
+Zhongwei,Ningxia,292043
+Qiqihar,Heilongjiang,291777
+Shuozhou,Shanxi,291462
+Wulanchabu,Inner Mongolia,290034
+Pu'er,Yunnan,289497
+Fuxin,Liaoning,282378
+Jiuquan,Gansu,275572
+Wuwei,Gansu,274931
+Panzhihua,Sichuan,263695
+Baiyin,Gansu,263149
+Baotou,Inner Mongolia,261437
+Tongchuan,Shaanxi,254358
+Aba Tibetan and Qiang Autonomous Prefecture,Sichuan,253514
+Qionghai,Hainan,246000
+Longnan,Gansu,245948
+Qingyang,Gansu,244102
+Fangchenggang,Guangxi,243075
+Wenchang,Hainan,238227
+Danzhou,Hainan,233919
+Haidong,Qinghai,232476
+Yangquan,Shanxi,228313
+Jiyuan,Henan,224282
+Baoshan,Yunnan,221842
+Guyuan,Ningxia,214080
+Tonghua,Jilin,205365
+Baicheng,Jilin,196058
+Shizuishan,Ningxia,191639
+Benxi,Liaoning,181460
+Hami,Xinjiang,180941
+Ledong Li Autonomous County,Hainan,174638
+Zhangye,Gansu,173721
+Tacheng Area,Xinjiang,155799
+Ding'an County,Hainan,153487
+Dandong,Liaoning,151818
+Jiamusi,Heilongjiang,149765
+Ili Kazakh Autonomous Prefecture,Xinjiang,147865
+Bayingolin Mongolian Autonomous Prefecture,Xinjiang,142277
+Bayannur,Inner Mongolia,138177
+Turpan,Xinjiang,138009
+Ganzi Tibetan Autonomous Prefecture,Sichuan,134821
+Liaoyuan,Jilin,131565
+Xing'an League,Inner Mongolia,128150
+Lingao County,Hainan,125762
+Aksu Area,Xinjiang,124619
+Baoting Li and Miao Autonomous County,Hainan,122332
+Lincang,Yunnan,119612
+Linxia Hui Autonomous Prefecture,Gansu,119243
+Xilin Gol League,Inner Mongolia,116506
+Dehong Dai and Jingpo Autonomous Prefecture,Yunnan,114550
+Shihezi,Xinjiang,113626
+Yanbian Korean Autonomous Prefecture,Jilin,112471
+Mudanjiang,Heilongjiang,112064
+Wuhai,Inner Mongolia,111461
+Dongfang,Hainan,107495
+Jiayuguan,Gansu,97768
+Alxa League,Inner Mongolia,95877
+Wujiaqu,Xinjiang,92255
+Baishan,Jilin,91113
+Hulunbeir,Inner Mongolia,90336
+Jinchang,Gansu,88443
+Tunchang County,Hainan,83338
+Kashgar Area,Xinjiang,82989
+Heihe,Heilongjiang,81577
+Haixi Mongolian and Tibetan Autonomous Prefecture,Qinghai,80727
+Shuangyashan,Heilongjiang,74380
+Wuzhishan,Hainan,74143
+Karamay,Xinjiang,72996
+Qiongzhong Li and Miao Autonomous County,Hainan,72406
+Changjiang Li Autonomous County,Hainan,71656
+Bortala Mongolian Autonomous Prefecture,Xinjiang,70547
+Diqing Tibetan Autonomous Prefecture,Yunnan,69288
+Jixi,Heilongjiang,65489
+Lhasa,Tibet,57804
+Yichun,Heilongjiang,56900
+Hegang,Heilongjiang,51836
+Hainan Tibetan Autonomous Prefecture,Qinghai,51805
+Aral,Xinjiang,50671
+Qitaihe,Heilongjiang,48050
+Baisha Li Autonomous County,Hainan,42379
+Gannan Tibetan Autonomous Prefecture,Gansu,39080
+Altay Region,Xinjiang,38269
+Kizilsu Kirgiz Autonomous Prefecture,Xinjiang,34699
+Hotan Area,Xinjiang,33376
+Shennongjia Forest Area,Hubei,32059
+Haibei Tibetan Autonomous Prefecture,Qinghai,27764
+Nujiang Lisu Autonomous Prefecture,Yunnan,27385
+Shannan,Tibet,25453
+Kokkhara,Xinjiang,25056
+Qamdo,Tibet,23435
+Shuanghe,Xinjiang,18918
+Nyingchi,Tibet,18007
+Beitun,Xinjiang,17007
+Tiemenguan,Xinjiang,16147
+Huangnan Tibetan Autonomous Prefecture,Qinghai,15041
+Tumusuk,Xinjiang,14506
+Nagqu,Tibet,13788
+Greater Khingan Mountains,Heilongjiang,12789
+Shigatse,Tibet,12365
+Golog Tibetan Autonomous Prefecture,Qinghai,11302
+Yushu Tibetan Autonomous Prefecture,Qinghai,7863
+Kunyu,Xinjiang,5655
+Ngari Area,Tibet,1367

@@ -9,105 +9,6 @@ LunarVisualise<-function(prepared_data)
 {
 
 
-#月相底图
-library(WeightedTreemaps)
-library(dplyr)
-library(colorspace)
-
-df5 = read.csv("s5.csv")#对照组数据
-df5 <- df5 %>%
-  mutate(city = gsub(" ", "\n", city)) %>%
-  arrange(desc(m)) %>%
-  mutate(re_size = 5)
-
-tm5 <- voronoiTreemap(
-  data = df5,
-  levels = c("prov", "city"),
-  cell_size = "re_size",
-  custom_color = "m",
-  shape = "circle",
-  positioning = c("regular", "clustered_by_area"),
-  maxIteration = 80,
-  error_tol = 0.1,
-  seed = 31
-)
-#调色板：采用了黑白调色代替月相变化
-custom_pal_1 <- sequential_hcl(
-  n = 34,
-  h = c(-46, 78),
-  c = c(0, 0),
-  l = c(75, 82),
-  power = c(0.8, 1),
-  rev = TRUE
-)
-
-# 创建一个新的R绘图设备，并设置大小
-png("月相底图.png", width = 30, height = 30, units = "cm", res = 500)
-#进行绘图
-drawTreemap(
-  tm5,
-  color_palette = custom_pal_1,
-  color_type = "custom_color",
-  color_level = 2,
-  label_size = 2,  # 调整label大小
-  border_size = 2,
-  border_color = gray(0.9),
-  add = TRUE,
-  layout = c(3, 3),
-  position = c(2, 2)
-)
-
-
-drawTreemap(
-  tm5,
-  color_palette = custom_pal_1,
-  color_type = "custom_color",
-  color_level = 2,
-  label_size = 2,  # 调整label大小
-  border_size = 2,
-  border_color = gray(0.9),
-  add = TRUE,
-  layout = c(3, 3), position = c(1, 2)
-)
-
-drawTreemap(
-  tm5,
-  color_palette = custom_pal_1,
-  color_type = "custom_color",
-  color_level = 2,
-  label_size = 2,  # 调整label大小
-  border_size = 2,
-  border_color = gray(0.9),
-  add = TRUE,
-  layout = c(3, 3), position = c(2, 3)
-)
-
-drawTreemap(
-  tm5,
-  color_palette = custom_pal_1,
-  color_type = "custom_color",
-  color_level = 2,
-  label_size = 2,  # 调整label大小
-  border_size = 2,
-  border_color = gray(0.9),
-  add = TRUE,
-  layout = c(3, 3), position = c(3, 2)
-)
-
-drawTreemap(
-  tm5,
-  color_palette = custom_pal_1,
-  color_type = "custom_color",
-  color_level = 2,
-  label_size = 2,  # 调整label大小
-  border_size = 2,
-  border_color = gray(0.9),
-  add = TRUE,
-  layout = c(3, 3), position = c(2, 1)
-)
-
-
-dev.off()
 
 #月相图
 #加载库
@@ -117,6 +18,7 @@ library(colorspace)
 library(gridExtra)
 library(grid)
 library(png)
+library(magick)
 
 # 输入每年数据
 df1 = read.csv("s1.csv")
@@ -139,6 +41,29 @@ df3 <- process_data(df3)
 df4 <- process_data(df4)
 df5 <- process_data(df5)
 
+# 计算每个数据框的 m 值总和
+m_sums <- c(
+  sum(df1$m),
+  sum(df2$m),
+  sum(df3$m),
+  sum(df4$m),
+  sum(df5$m)
+)
+
+# 找到最大值
+max_m <- max(m_sums)
+max_m_index <- which.max(m_sums)
+
+# 计算相对宽度和高度
+widths_heights <- lapply(m_sums, function(m_val) {
+  size <- (m_val / max_m) * 10  # 根据最大值计算相对大小
+  return(c(size, size))  # 返回宽度和高度
+})
+
+# 将结果转换为矩阵格式
+sizes_matrix <- do.call(rbind, widths_heights)
+
+
 # 创建Voronoi树图
 create_treemap <- function(data) {
   voronoiTreemap(
@@ -149,7 +74,7 @@ create_treemap <- function(data) {
     shape = "circle",
     positioning = c("regular", "clustered_by_area"),
     maxIteration = 80,
-    error_tol = 0.1,
+    error_tol = 0.001,
     seed = 31
   )
 }
@@ -172,7 +97,7 @@ custom_pal_1 <- sequential_hcl(
 
 # 保存每个树图为PNG文件
 saveTreemapPNG <- function(treemap, filename, label_size, width, height) {
-  png(filename, width = width, height = height, units = "cm", res = 500)  # 降低分辨率
+  png(filename, width = width, height = height, units = "cm", res = 1000)  # 降低分辨率
   drawTreemap(
     treemap,
     color_palette = custom_pal_1,
@@ -189,15 +114,16 @@ saveTreemapPNG <- function(treemap, filename, label_size, width, height) {
   dev.off()
 }
 
-# 保存每个图的 PNG，设置对应的大小
-saveTreemapPNG(tm1, "tm1_2019.png", 2, 9.4, 9.4)  # 2019
-saveTreemapPNG(tm2, "tm1_2020.png", 1.8, 8.8, 8.8)  # 2020
-saveTreemapPNG(tm3, "tm1_2021.png", 1.2, 6.0, 6.0)  # 2021
-saveTreemapPNG(tm4, "tm1_2022.png", 1.6, 7.8, 7.8)  # 2022
-saveTreemapPNG(tm5, "tm1_2023.png", 2.2, 10.0, 10.0) # 2023
+# 保存每个图的 PNG，设置对应的相对大小
+saveTreemapPNG(tm1, "tm1_2019.png", 2, sizes_matrix[1, 1], sizes_matrix[1, 2])  # 2019
+saveTreemapPNG(tm2, "tm1_2020.png", 1.8, sizes_matrix[2, 1], sizes_matrix[2, 2])  # 2020
+saveTreemapPNG(tm3, "tm1_2021.png", 1.2, sizes_matrix[3, 1], sizes_matrix[3, 2])  # 2021
+saveTreemapPNG(tm4, "tm1_2022.png", 1.6, sizes_matrix[4, 1], sizes_matrix[4, 2])  # 2022
+saveTreemapPNG(tm5, "tm1_2023.png", 2.2, sizes_matrix[5, 1], sizes_matrix[5, 2])  # 2023
+
 
 # 生成组合图并设置高分辨率
-png("combined_treemap.png", width = 30, height = 30, units = "cm", res = 1000)
+png("Lunarphases_diagram.png", width = 30, height = 30, units = "cm", res = 1800)
 
 # 使用grid来绘制组合图
 grid.newpage()
@@ -214,21 +140,130 @@ pushViewport(viewport(layout = grid.layout(3, 3,
                                            widths = unit(rep(1/3, 3), "npc"),
                                            heights = unit(rep(1/3, 3), "npc"))))
 
-# 在指定位置绘制每个图，保持相对比例
-grid.raster(img1, width = unit(9.4 / 10, "npc"), height = unit(9.4 / 10, "npc"),
+# 在指定位置绘制每个图，保持每个图的原始大小
+grid.raster(img1, width = unit(sizes_matrix[1, 1] / 10, "npc"),
+            height = unit(sizes_matrix[1, 2] / 10, "npc"),
             vp = viewport(layout.pos.row = 2, layout.pos.col = 2))  # 2019 (2,2)
 
-grid.raster(img2, width = unit(8.8 / 10, "npc"), height = unit(8.8 / 10, "npc"),
+grid.raster(img2, width = unit(sizes_matrix[2, 1] / 10, "npc"),
+            height = unit(sizes_matrix[2, 2] / 10, "npc"),
             vp = viewport(layout.pos.row = 2, layout.pos.col = 3))  # 2020 (2,3)
 
-grid.raster(img3, width = unit(6.0 / 10, "npc"), height = unit(6.0 / 10, "npc"),
+grid.raster(img3, width = unit(sizes_matrix[3, 1] / 10, "npc"),
+            height = unit(sizes_matrix[3, 2] / 10, "npc"),
             vp = viewport(layout.pos.row = 1, layout.pos.col = 2))  # 2021 (1,2)
 
-grid.raster(img4, width = unit(7.8 / 10, "npc"), height = unit(7.8 / 10, "npc"),
+grid.raster(img4, width = unit(sizes_matrix[4, 1] / 10, "npc"),
+            height = unit(sizes_matrix[4, 2] / 10, "npc"),
             vp = viewport(layout.pos.row = 2, layout.pos.col = 1))  # 2022 (2,1)
 
-grid.raster(img5, width = unit(10.0 / 10, "npc"), height = unit(10.0 / 10, "npc"),
+grid.raster(img5, width = unit(sizes_matrix[5, 1] / 10, "npc"),
+            height = unit(sizes_matrix[5, 2] / 10, "npc"),
             vp = viewport(layout.pos.row = 3, layout.pos.col = 2))  # 2023 (3,2)
 
 dev.off()
+
+
+#根据max_m_index的数据索引值绘制月相底图：如environment显示值为5L则第五个数据框df5为最大值
+
+
+#调色板：采用了黑白调色代替月相变化
+custom_pal_2 <- sequential_hcl(
+  n = 34,
+  h = c(-46, 78),
+  c = c(0, 0),
+  l = c(75, 82),
+  power = c(0.8, 1),
+  rev = TRUE
+)
+
+# 创建一个新的R绘图设备，并设置大小
+png("Lunarphases_background.png", width = 30, height = 30, units = "cm", res = 500)
+#进行绘图
+drawTreemap(
+  tm5,
+  color_palette = custom_pal_2,
+  color_type = "custom_color",
+  color_level = 2,
+  label_size = 2,  # 调整label大小
+  border_size = 2,
+  border_color = gray(0.9),
+  add = TRUE,
+  layout = c(3, 3),
+  position = c(2, 2)
+)
+
+
+drawTreemap(
+  tm5,
+  color_palette = custom_pal_2,
+  color_type = "custom_color",
+  color_level = 2,
+  label_size = 2,  # 调整label大小
+  border_size = 2,
+  border_color = gray(0.9),
+  add = TRUE,
+  layout = c(3, 3), position = c(1, 2)
+)
+
+drawTreemap(
+  tm5,
+  color_palette = custom_pal_2,
+  color_type = "custom_color",
+  color_level = 2,
+  label_size = 2,  # 调整label大小
+  border_size = 2,
+  border_color = gray(0.9),
+  add = TRUE,
+  layout = c(3, 3), position = c(2, 3)
+)
+
+drawTreemap(
+  tm5,
+  color_palette = custom_pal_2,
+  color_type = "custom_color",
+  color_level = 2,
+  label_size = 2,  # 调整label大小
+  border_size = 2,
+  border_color = gray(0.9),
+  add = TRUE,
+  layout = c(3, 3), position = c(3, 2)
+)
+
+drawTreemap(
+  tm5,
+  color_palette = custom_pal_2,
+  color_type = "custom_color",
+  color_level = 2,
+  label_size = 2,  # 调整label大小
+  border_size = 2,
+  border_color = gray(0.9),
+  add = TRUE,
+  layout = c(3, 3), position = c(2, 1)
+)
+dev.off()
+
+library(magick)
+
+# 读取两张图像
+diagram_image <- image_read("Lunarphases_diagram.png")
+background_image <- image_read("Lunarphases_background.png")
+
+
+# 将 diagram_image 中的白色部分设置为透明（假设白色是空白部分）
+diagram_image <- image_transparent(diagram_image, "white")
+
+# 确保两张图像的尺寸一致
+diagram_image <- image_scale(diagram_image,
+                              geometry_size_pixels(width = image_info(background_image)$width,
+                                                   height = image_info(background_image)$height))
+
+# 将组合图叠加到月相底图上
+final_image <- image_composite(background_image, diagram_image, operator = "over")
+
+# 保存叠加后的图像
+image_write(final_image, "Lunarphases_visualisation.png")
+
+# 显示最终图像以进行检查
+print(final_image)
 }
