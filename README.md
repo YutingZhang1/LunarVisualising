@@ -1,8 +1,7 @@
 
-# Code Release: Lunar Phase Visualisation Technology
+# Lunar Phase Visualisation Technology
 
-**Hengyu Gu and Yuting Zhang**  
-Nanjing University <br />
+**Hengyu Gu** [ResearchGate](https://www.researchgate.net/profile/Hengyu-Gu) and **Yuting Zhang**[ResearchGate](https://www.researchgate.net/profile/Yu-Zhang-1116)  Nanjing University <br />
 
 <p>
 
@@ -25,7 +24,7 @@ The **LunarVisualising** package is designed to generate visualisations of lunar
 
 ## Introduction
 
-This paper introduces a technique for visualising intercity population movement using **Voronoi treemaps** [(Jahn et al., 2021)](https://github.com/m-jahn/WeightedTreemaps), drawing inspiration from **lunar phase arrangements**. This technique assigns different colours to 365 cities in China.
+This paper introduces a visualization technique for intercity population movement called Lunar Phase Visualization. By utilizing a method based on **Voronoi treemaps** [(Jahn et al., 2021)](https://github.com/m-jahn/WeightedTreemaps)and drawing inspiration from lunar phase arrangements, this innovative approach uses the moon's changing phases to represent data decreases, assigning different colors to 365 cities in China.
 
 The maximum value within a given period serves as **the control group**. Shaded areas illustrate reductions in intercity population flow (waning phase), enabling a more intuitive comparison of changes during each year's Spring Festival.
 
@@ -37,23 +36,22 @@ Using this lunar phase visualization method, based on the latest location-based 
 <p align="center"><i>Intercity mobility patterns during the Spring Festival travel rush, 2019–2023.</i></p>
 
 
-!Source(https://report.amap.com/migrate/page.do)   
-**Note: **Shaded regions indicate reduced mobility, with 2023 as the benchmark. Colour represents the intercity mobility volume of each city. Circle size represents total daily average intercity mobility for all cities in each year.
+**Data Source** (https://report.amap.com/migrate/page.do)   
+**Note: ** Shaded regions indicate reduced mobility, with 2023 as the benchmark. Colour represents the intercity mobility volume of each city. Circle size represents total daily average intercity mobility for all cities in each year.
 
 **Methods:**
 1. Use the Weightedtreemaps package in R.
 2. Calculate Recovery index: 
-   - 2019 = \((\text{2019total}−\text{2020total})/\text{2020total} \times 100%\)
-   - 2020 = \((\text{2023total}−\text{2020total})/\text{2020total} \times 100%\)
+- Recovery index 2019: \(\left( \frac{\text{2019 total} - \text{2020 total}}{\text{2020 total}} \right) \times 100\%\)
+ -Recovery index 2020: \(\left( \frac{\text{2023 total} - \text{2020 total}}{\text{2020 total}} \right) \times 100\%\)
 
-
-These indices illustrate observed intercity mobility patterns from 2019 to 2023, covering the return home period (first 20 days), the back-to-city period (last 20 days), and the total 40-day period.
+These indices illustrate observed intercity mobility patterns from 2019 to 2023, covering the return home period (first 20 days), the back-to-city period (last 20 days), and the total 40 day period.
 
 <p float="center">
   <img src="https://github.com/YutingZhang1/LunarVisualising/blob/master/Single_Lunarphases.png" width=45% height=45% />
 </p>
 <p align="center"><i>Single_Lunar phases Visualision_diagram, 2022.</i></p>
-*Zoomed View:* Taking the return home period in 2022 as an example, the grey shaded area represents the reduced average mobility compared to 2023. Chongqing had the largest average mobility among municipalities in 2022, with significant movement in Guangzhou, Dongguan, Foshan, Shenzhen, Suzhou, and Chengdu during the return home period.
+**Zoomed View:** Taking the return home period in 2022 as an example, the grey shaded area represents the reduced average mobility compared to 2023. Among the four municipalities, Chongqing had the largest average mobility among municipalities in 2022, with significant movement in Guangzhou, Dongguan, Foshan, Shenzhen, Suzhou, and Chengdu during the return home period.
 
 ## Installation
 
@@ -130,7 +128,7 @@ custom_pal_2 <- sequential_hcl(
 )
 ```
 
-- **Green-Red Shades:**
+- **Heatmap Gradient:**
 
 ```r
 custom_pal_3 <- diverging_hcl(
