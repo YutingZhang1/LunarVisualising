@@ -1,7 +1,7 @@
 
 # Lunar Phase Visualisation Technology
 
-**Hengyu Gu** [ResearchGate](https://www.researchgate.net/profile/Hengyu-Gu) and **Yuting Zhang**[ResearchGate](https://www.researchgate.net/profile/Yu-Zhang-1116)  Nanjing University <br />
+**Hengyu Gu** ([ResearchGate](https://www.researchgate.net/profile/Hengyu-Gu)) and **Yuting Zhang** ([ResearchGate](https://www.researchgate.net/profile/Yu-Zhang-1116))     Nanjing University <br />
 
 <p>
 
@@ -37,7 +37,7 @@ Using this lunar phase visualization method, based on the latest location-based 
 
 
 **Data Source** (https://report.amap.com/migrate/page.do)   
-**Note: ** Shaded regions indicate reduced mobility, with 2023 as the benchmark. Colour represents the intercity mobility volume of each city. Circle size represents total daily average intercity mobility for all cities in each year.
+**Note:** Shaded regions indicate reduced mobility, with 2023 as the benchmark. Colour represents the intercity mobility volume of each city. Circle size represents total daily average intercity mobility for all cities in each year.
 
 **Methods:**
 1. Use the Weightedtreemaps package in R.
